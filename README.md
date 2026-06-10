@@ -52,7 +52,9 @@ directory = "./out"
 Use these Cloudflare build settings:
 
 - Build command: `npm run pages:build`
-- Deploy command: `npx wrangler deploy`
+- Deploy command: `npx wrangler deploy --config ./wrangler.toml --assets=./out`
+
+If the deploy command stays as only `npx wrangler deploy` and Cloudflare does not pick up `wrangler.toml`, deployment can fail with an assets directory error.
 
 For command-line Workers deployment:
 
