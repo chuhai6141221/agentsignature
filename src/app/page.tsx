@@ -30,9 +30,9 @@ export default function Home() {
         
         <h2>How to Add Your Signature to Gmail</h2>
         <ol>
-          <li>Click "Copy Signature" above.</li>
+          <li>Click &quot;Copy Signature&quot; above.</li>
           <li>Open Gmail and click the gear icon (Settings) -{'>'} See all settings.</li>
-          <li>Scroll down to the "Signature" section.</li>
+          <li>Scroll down to the &quot;Signature&quot; section.</li>
           <li>Create a new signature, paste (Ctrl+V or Cmd+V), and Save Changes.</li>
         </ol>
       </div>

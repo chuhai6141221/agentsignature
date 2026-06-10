@@ -29,8 +29,24 @@ npm run dev
 npm run test
 \`\`\`
 
-## Deployment
-This project is optimized for [Vercel](https://vercel.com/). Push to GitHub and connect to Vercel for zero-config deployment.
+## Cloudflare Pages Deployment
+This project is configured for a static Next.js export, which can be deployed directly to Cloudflare Pages.
+
+Cloudflare Pages settings:
+
+- Framework preset: `Next.js (Static HTML Export)`
+- Build command: `npm run pages:build`
+- Build output directory: `out`
+- Node.js version: `20`
+
+The same output directory is also declared in `wrangler.toml` through `pages_build_output_dir = "out"`.
+
+For command-line deployment:
+
+\`\`\`bash
+npx wrangler login
+npm run deploy:cloudflare
+\`\`\`
 
 ## Roadmap
 - [ ] Integrate Stripe for Pro template unlocking

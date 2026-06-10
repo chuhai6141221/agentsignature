@@ -7,4 +7,4 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
   },
-})
+} as Parameters<typeof defineConfig>[0])
