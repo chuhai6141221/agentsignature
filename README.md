@@ -41,11 +41,31 @@ Cloudflare Pages settings:
 
 The same output directory is also declared in `wrangler.toml` through `pages_build_output_dir = "out"`.
 
-For command-line deployment:
+## Cloudflare Workers Static Assets
+If your Cloudflare project runs a deploy command such as `npx wrangler deploy`, this repository also declares the exported static assets directory in `wrangler.toml`:
+
+\`\`\`toml
+[assets]
+directory = "./out"
+\`\`\`
+
+Use these Cloudflare build settings:
+
+- Build command: `npm run pages:build`
+- Deploy command: `npx wrangler deploy`
+
+For command-line Workers deployment:
 
 \`\`\`bash
 npx wrangler login
 npm run deploy:cloudflare
+\`\`\`
+
+For command-line Pages deployment:
+
+\`\`\`bash
+npx wrangler login
+npm run deploy:cloudflare:pages
 \`\`\`
 
 ## Roadmap
